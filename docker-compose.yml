@@ -1,0 +1,13 @@
+services:
+  flight-tracker:
+    build: .
+    container_name: flight-tracker
+    restart: unless-stopped
+    environment:
+      - FLIGHT_TRACKER_BOT_TOKEN=${FLIGHT_TRACKER_BOT_TOKEN}
+      - POLL_INTERVAL_SECONDS=5
+      - TZ=Asia/Kolkata
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./exports:/app/exports

@@ -1,0 +1,7 @@
+playwright
+playwright-stealth
+apscheduler
+python-telegram-bot
+openpyxl
+requests
+bs4
